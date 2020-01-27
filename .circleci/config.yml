@@ -8,7 +8,7 @@ jobs:
       - run: echo "A first hello"
       - run: mkdir -p my_workspace
       - run: echo "Trying out workspaces" > my_workspaces/echo_output
-      - persist_to_workspaces:
+      - persist_to_workspace:
           root: my_workspace
           paths:
             - echo-output
