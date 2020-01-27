@@ -11,7 +11,7 @@ jobs:
       - persist_to_workspace:
           root: my_workspace
           paths:
-            - echo-output
+            - echo_output
   two:
     docker:
       - image: circleci/ruby:2.4.1
@@ -21,7 +21,7 @@ jobs:
       - attach_workspace:
           at: my_workspace
       - run: |
-          if [[ $(cat my_workspace/echo-output) == "Trying out workspace" ]]; then
+          if [[ $(cat my_workspace/echo_output) == "Trying out workspace" ]]; then
             echo "It worked"
           else
             echo "Nope!"; exit 1
